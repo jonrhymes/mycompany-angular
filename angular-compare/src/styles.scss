@@ -1,27 +1,3 @@
 /* You can add global styles to this file, and also import other style files */
 
-// $primary: #1EC9AC !default;
-
-// $tablet: 769px !default;
-// $desktop: 1000px !default;
-// $widescreen: 1192px !default;
-// $fullhd: 1384px !default;
-
-// @mixin breakpoint($point) {
-//     @if $point == desktop {
-//       @media (min-width: 70em) { @content ; }
-//    }
-//     @else if $point == laptop {
-//       @media (min-width: 64em) { @content ; }
-//    }
-//      @else if $point == tablet {
-//       @media (min-width: 50em) { @content ; }
-//    }
-//     @else if $point == phablet {
-//       @media (min-width: 37.5em)  { @content ; }
-//    }
-//    @else if $point == mobileonly {
-//       @media (max-width: 37.5em)  { @content ; }
- 
-//    }
-//  }
+@import '~bulma/css/bulma.css'
