@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JSONPlaceholderService } from '../services/jsonplaceholder.service'
 
 @Component({
   selector: 'app-faq',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FaqComponent implements OnInit {
 
-  constructor() { }
+  faqs: Array<any>;
+  errorMessage: String;
 
-  ngOnInit(): void {
+  constructor(private JSONPlaceholder: JSONPlaceholderService) { 
+    this.faqs = new Array<any>()
   }
-
+  ngOnInit() {
+    this.JSONPlaceholder.getData().subscribe((faqs) => {
+      this.faqs = faqs.slice(0, 10);
+      })
+  }
 }
